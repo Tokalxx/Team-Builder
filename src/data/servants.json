@@ -1,0 +1,20 @@
+[
+  {
+    "id": 100,
+    "name": "Emiya",
+    "class": "Archer",
+    "rarity": 4
+  },
+  {
+    "id": 101,
+    "name": "Tamamo Cat",
+    "class": "Berserker",
+    "rarity": 4
+  },
+  {
+    "id": 102,
+    "name": "Saber Alter",
+    "class": "Saber",
+    "rarity": 4
+  }
+]
