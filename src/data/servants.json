@@ -1,20 +1,278 @@
 [
   {
-    "id": 100,
-    "name": "Emiya",
-    "class": "Archer",
-    "rarity": 4
+    "id": 116,
+    "name": "Sitoniai",
+    "class": "Alter Ego",
+    "rarity": 5,
+    "role": "ST_DPS",
+    "cardType": "Arts",
+    "skills": ["Snow Fairy EX", "Frozen Emotion B", "Kamuy Yukar A"],
+    "np": "Oputateshike Okimunpe Roar, My Friend, My Strength",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance C",
+      "Territory Creation A",
+      "Item Construction B",
+      "Goddess' Essence B",
+      "High Servant A"
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Meltryllis",
+    "class": "Alter Ego",
+    "rarity": 5,
+    "role": "ST_DPS",
+    "cardType": "Quick",
+    "skills": ["Crime Ballet A+", "Sadistic Constitution A+", "Melt Virus EX"],
+    "np": "Sarasvati Meltout Benzaiten's Five-String Biwa",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance B",
+      "Riding B",
+      "Independent Action A",
+      "Goddess' Essence B",
+      "High Servant A"
+    ]
+  },
+  {
+    "id": 161,
+    "name": "Xu Fu",
+    "class": "Alter Ego",
+    "rarity": 3,
+    "role": "Support",
+    "cardType": "Arts",
+    "skills": [
+      "Five Grains Veneration B",
+      "Taoism Arts (External) A",
+      "Legend of Xu Fu C"
+    ],
+    "np": null,
+    "bondLevel": null,
+    "passives": [
+      "Settlement Creation EX",
+      "Item Construction B+",
+      "High Servant D",
+      "Weakened (Consort Yu) EX",
+      null
+    ]
   },
   {
     "id": 101,
-    "name": "Tamamo Cat",
-    "class": "Berserker",
-    "rarity": 4
+    "name": "EMIYA",
+    "class": "Archer",
+    "rarity": 4,
+    "role": "AOE_DPS",
+    "cardType": "Buster/Arts",
+    "skills": ["Eye of the Mind (True) EX", "Hawkeye B+", "Circuit Connect EX"],
+    "np": "Unlimited Blade Works Infinite Creation of Swords",
+    "bondLevel": null,
+    "passives": ["Magic Resistance D", "Independent Action B", null, null, null]
   },
   {
-    "id": 102,
-    "name": "Saber Alter",
-    "class": "Saber",
-    "rarity": 4
+    "id": 108,
+    "name": "Chiron",
+    "class": "Archer",
+    "rarity": 4,
+    "role": "ST_Sub-DPS",
+    "cardType": "Arts",
+    "skills": [
+      "Eye of the Mind (True) A",
+      "Eternal Consecration EX",
+      "Wisdom of Divine Gift A+"
+    ],
+    "np": "Antares Snipe Heavenly Scorpion Single-Shot",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance B",
+      "Independent Action A",
+      "Divinity C",
+      null,
+      null
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Tomoe Gozen",
+    "class": "Archer",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Buster",
+    "skills": [
+      "Demonic Nature of Oni B",
+      "Knowledge of Chaotic Battle B",
+      "Adrenaline Rush A"
+    ],
+    "np": "On Arorikya Sowaka Mantra of the Sho Kanzeon Bosatsu",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance B",
+      "Independent Action A",
+      "Mad Enhancement E",
+      null,
+      null
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Aśvatthāman",
+    "class": "Archer",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Buster",
+    "skills": [
+      "Mystic Gem of Mani B",
+      "Violation of Chivalry A",
+      "Revered Soldier A+"
+    ],
+    "np": "Sudarshan Chakra Yamaraj O' Chakram, Stir Up My Raging Flames",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance A",
+      "Independent Action EX",
+      "Rudra Avatāra EX",
+      "Divinity A+",
+      null
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Calamity Jane",
+    "class": "Archer",
+    "rarity": 4,
+    "role": "ST_Sub-DPS",
+    "cardType": null,
+    "skills": [
+      "Goddess' Chaperone B",
+      "Galaxy Messenger EX",
+      "O' Polar Star, Shine My Way B"
+    ],
+    "np": "Space Dead Man's Hand First Black Hand that Beckons Death",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance C",
+      "Riding A",
+      "Presence Concealment A",
+      "Independent Action A+",
+      null
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Ishtar",
+    "class": "Archer",
+    "rarity": 5,
+    "role": "AOE_DPS",
+    "cardType": "Buster",
+    "skills": [
+      "Manifestation of Beauty B",
+      "Gleaming Brilliant Crown A",
+      "Clockup Jewel Formation of Absolute Fortune A"
+    ],
+    "np": "An Gal Ta Ki Gal Šè Mountain Range-Shaking Firewood of Venus",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance A",
+      "Independent Action A",
+      "Goddess' Essence B",
+      null,
+      null
+    ]
+  },
+  {
+    "id": 146,
+    "name": "Baobhan Sith",
+    "class": "Archer",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Quick",
+    "skills": ["Grimalkin A", "Blessed Scion EX", "Fae Vampirism A"],
+    "np": "Fetch Failnaught Lamentasia of Fantation",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance EX",
+      "Riding A",
+      "Territory Creation A",
+      null,
+      null
+    ]
+  },
+  {
+    "id": 148,
+    "name": "Tristan",
+    "class": "Archer",
+    "rarity": 4,
+    "role": "ST_Sub-DPS",
+    "cardType": "Quick",
+    "skills": [
+      "In Sonorous Praise of Love A",
+      "Grace of the Unexpected Birth B",
+      "Admonishment to the King of Knights B"
+    ],
+    "np": "Failnaught Fantasia of Lamentation",
+    "bondLevel": null,
+    "passives": ["Magic Resistance B", "Independent Action B", null, null, null]
+  },
+  {
+    "id": 171,
+    "name": "Durga",
+    "class": "Archer",
+    "rarity": 5,
+    "role": "AOE_DPS",
+    "cardType": "Arts",
+    "skills": ["Mahamaya EX", "The Unapproachable One A", "The Third Eye EX"],
+    "np": "Mahisasuramardini O Rage, Desire and Demon-Massacring Goddess",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance A",
+      "Riding A",
+      "Independent Action C",
+      "Goddess' Essence B",
+      "Divinely-Bestowed Arms EX"
+    ]
+  },
+  {
+    "id": 175,
+    "name": "UDK-Barghest",
+    "class": "Archer",
+    "rarity": 4,
+    "role": "Target-Switch_DPS",
+    "cardType": "Arts",
+    "skills": [
+      "Union Defence Knights A",
+      "Unlocks after 1st Ascension",
+      "Unlocks after 3rd Ascension"
+    ],
+    "np": "Watersave Galatine Horn of the Sun that Cleanses the Disaster",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance C",
+      "Mad Enhancement C",
+      "Faerie Knight E",
+      "Thundercloud Eater A",
+      null
+    ]
+  },
+  {
+    "id": 178,
+    "name": "Asagami Fujino",
+    "class": "Archer",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Buster",
+    "skills": [
+      "Mystic Eyes of Distortion EX",
+      "Clairvoyance (Darkness) C++",
+      "Residual Pain A"
+    ],
+    "np": "Yuishiki - Waikyoku no Magan Vijñapti-mātratā - Mystic Eyes of Distortion",
+    "bondLevel": null,
+    "passives": [
+      "Magic Resistance D",
+      "Independent Action A+",
+      "Territory Creation B",
+      null,
+      null
+    ]
   }
 ]
