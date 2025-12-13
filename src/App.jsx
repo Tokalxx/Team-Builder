@@ -1,7 +1,10 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
+import Servant from "./pages/Servant";
+import Teams from "./pages/Teams";
 import servantRecord from "./data/servants.json"; //Temp import
-import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
@@ -9,16 +12,13 @@ function App() {
 
   return (
     <>
-      <div>
-        {servantRecord.map((servant) => {
-          return (
-            <div>
-              <p>Class: {servant.class}</p>
-              <p>Name: {servant.name}</p>
-              <p>Rarity: {servant.rarity}</p>
-            </div>
-          );
-        })}
+      <NavBar />
+      <div className="content-div">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/servant" element={<Servant />} />
+          <Route path="/teams" element={<Teams />} />
+        </Routes>
       </div>
     </>
   );

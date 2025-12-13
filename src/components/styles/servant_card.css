@@ -1,0 +1,9 @@
+.servant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  gap: 1rem;
+}
+
+.servant-card {
+  border: red dotted 1px;
+}

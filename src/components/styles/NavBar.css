@@ -1,0 +1,22 @@
+#navbar {
+  border: yellow solid;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  column-gap: 3rem;
+  align-content: center;
+  justify-content: center;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+}
+#navbar a:visited {
+  color: white;
+  text-decoration: none;
+}
+#navbar a:hover {
+  color: rgb(141, 0, 0);
+  text-decoration: none;
+}
