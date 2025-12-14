@@ -1,7 +1,7 @@
 [
   {
     "id": 116,
-    "name": "Sitoniai",
+    "name": "Sitonai",
     "class": "Alter Ego",
     "rarity": 5,
     "role": "ST_DPS",
@@ -15,7 +15,8 @@
       "Item Construction B",
       "Goddess' Essence B",
       "High Servant A"
-    ]
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/1000800/1000800a@2.png"
   },
   {
     "id": 135,
@@ -25,7 +26,7 @@
     "role": "ST_DPS",
     "cardType": "Quick",
     "skills": ["Crime Ballet A+", "Sadistic Constitution A+", "Melt Virus EX"],
-    "np": "Sarasvati Meltout Benzaiten's Five-String Biwa",
+    "np": "Sarasvati Meltout – Benzaiten's Five-String Biwa",
     "bondLevel": null,
     "passives": [
       "Magic Resistance B",
@@ -33,7 +34,8 @@
       "Independent Action A",
       "Goddess' Essence B",
       "High Servant A"
-    ]
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/1000200/1000200a@1.png"
   },
   {
     "id": 161,
@@ -55,7 +57,8 @@
       "High Servant D",
       "Weakened (Consort Yu) EX",
       null
-    ]
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/1001400/1001400a@2.png"
   },
   {
     "id": 101,
@@ -65,9 +68,16 @@
     "role": "AOE_DPS",
     "cardType": "Buster/Arts",
     "skills": ["Eye of the Mind (True) EX", "Hawkeye B+", "Circuit Connect EX"],
-    "np": "Unlimited Blade Works Infinite Creation of Swords",
-    "bondLevel": null,
-    "passives": ["Magic Resistance D", "Independent Action B", null, null, null]
+    "np": "Unlimited Blade Works – Infinite Creation of Swords",
+    "bondLevel": 15,
+    "passives": [
+      "Magic Resistance D",
+      "Independent Action B",
+      null,
+      null,
+      null
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/200100/200100a@1.png"
   },
   {
     "id": 108,
@@ -81,7 +91,7 @@
       "Eternal Consecration EX",
       "Wisdom of Divine Gift A+"
     ],
-    "np": "Antares Snipe Heavenly Scorpion Single-Shot",
+    "np": "Antares Snipe – Heavenly Scorpion Single-Shot",
     "bondLevel": null,
     "passives": [
       "Magic Resistance B",
@@ -89,7 +99,8 @@
       "Divinity C",
       null,
       null
-    ]
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/203000/203000b@2.png"
   },
   {
     "id": 113,
@@ -103,7 +114,7 @@
       "Knowledge of Chaotic Battle B",
       "Adrenaline Rush A"
     ],
-    "np": "On Arorikya Sowaka Mantra of the Sho Kanzeon Bosatsu",
+    "np": "On Arorikya Sowaka – Mantra of the Sho Kanzeon Bosatsu",
     "bondLevel": null,
     "passives": [
       "Magic Resistance B",
@@ -111,7 +122,8 @@
       "Mad Enhancement E",
       null,
       null
-    ]
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/202100/202100b@2.png"
   },
   {
     "id": 118,
@@ -125,7 +137,7 @@
       "Violation of Chivalry A",
       "Revered Soldier A+"
     ],
-    "np": "Sudarshan Chakra Yamaraj O' Chakram, Stir Up My Raging Flames",
+    "np": "Sudarshan Chakra Yamaraj – O' Chakram, Stir Up My Raging Flames",
     "bondLevel": null,
     "passives": [
       "Magic Resistance A",
@@ -133,7 +145,8 @@
       "Rudra Avatāra EX",
       "Divinity A+",
       null
-    ]
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/203300/203300b@2.png"
   },
   {
     "id": 125,
@@ -147,7 +160,7 @@
       "Galaxy Messenger EX",
       "O' Polar Star, Shine My Way B"
     ],
-    "np": "Space Dead Man's Hand First Black Hand that Beckons Death",
+    "np": "Space Dead Man's Hand – First Black Hand that Beckons Death",
     "bondLevel": null,
     "passives": [
       "Magic Resistance C",
@@ -155,7 +168,8 @@
       "Presence Concealment A",
       "Independent Action A+",
       null
-    ]
+    ],
+    "image": "https://static.wikia.nocookie.net/fategrandorder/images/0/0f/CalamityJaneIllust01.jpg"
   },
   {
     "id": 128,
@@ -169,7 +183,7 @@
       "Gleaming Brilliant Crown A",
       "Clockup Jewel Formation of Absolute Fortune A"
     ],
-    "np": "An Gal Ta Ki Gal Šè Mountain Range-Shaking Firewood of Venus",
+    "np": "An Gal Ta Ki Gal Šè – Mountain Range-Shaking Firewood of Venus",
     "bondLevel": null,
     "passives": [
       "Magic Resistance A",
@@ -177,7 +191,8 @@
       "Goddess' Essence B",
       null,
       null
-    ]
+    ],
+    "image": "https://static.wikia.nocookie.net/fategrandorder/images/3/34/CE1227.webp"
   },
   {
     "id": 146,
@@ -187,7 +202,7 @@
     "role": "ST_DPS",
     "cardType": "Quick",
     "skills": ["Grimalkin A", "Blessed Scion EX", "Fae Vampirism A"],
-    "np": "Fetch Failnaught Lamentasia of Fantation",
+    "np": "Fetch Failnaught – Lamentasia of Fantation",
     "bondLevel": null,
     "passives": [
       "Magic Resistance EX",
@@ -195,7 +210,8 @@
       "Territory Creation A",
       null,
       null
-    ]
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/204300/204300a@1.png"
   },
   {
     "id": 148,
@@ -209,9 +225,16 @@
       "Grace of the Unexpected Birth B",
       "Admonishment to the King of Knights B"
     ],
-    "np": "Failnaught Fantasia of Lamentation",
+    "np": "Failnaught – Fantasia of Lamentation",
     "bondLevel": null,
-    "passives": ["Magic Resistance B", "Independent Action B", null, null, null]
+    "passives": [
+      "Magic Resistance B",
+      "Independent Action B",
+      null,
+      null,
+      null
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/200800/200800b@2.png"
   },
   {
     "id": 171,
@@ -221,7 +244,7 @@
     "role": "AOE_DPS",
     "cardType": "Arts",
     "skills": ["Mahamaya EX", "The Unapproachable One A", "The Third Eye EX"],
-    "np": "Mahisasuramardini O Rage, Desire and Demon-Massacring Goddess",
+    "np": "Mahisasuramardini – O Rage, Desire and Demon-Massacring Goddess",
     "bondLevel": null,
     "passives": [
       "Magic Resistance A",
@@ -229,7 +252,8 @@
       "Independent Action C",
       "Goddess' Essence B",
       "Divinely-Bestowed Arms EX"
-    ]
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/204800/204800a@2.png"
   },
   {
     "id": 175,
@@ -243,7 +267,7 @@
       "Unlocks after 1st Ascension",
       "Unlocks after 3rd Ascension"
     ],
-    "np": "Watersave Galatine Horn of the Sun that Cleanses the Disaster",
+    "np": "Watersave Galatine – Horn of the Sun that Cleanses the Disaster",
     "bondLevel": null,
     "passives": [
       "Magic Resistance C",
@@ -251,7 +275,8 @@
       "Faerie Knight E",
       "Thundercloud Eater A",
       null
-    ]
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/204900/204900a@2.png"
   },
   {
     "id": 178,
@@ -265,7 +290,7 @@
       "Clairvoyance (Darkness) C++",
       "Residual Pain A"
     ],
-    "np": "Yuishiki - Waikyoku no Magan Vijñapti-mātratā - Mystic Eyes of Distortion",
+    "np": "Yuishiki - Waikyoku no Magan – Vijñapti-mātratā - Mystic Eyes of Distortion",
     "bondLevel": null,
     "passives": [
       "Magic Resistance D",
@@ -273,6 +298,7 @@
       "Territory Creation B",
       null,
       null
-    ]
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/202900/202900a@1.png"
   }
 ]
