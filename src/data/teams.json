@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Hyper Carry",
+    "slots": {
+      "slot1": { "role": "Sustain", "cardType": null },
+      "slot2": { "role": "DPS", "cardType": null },
+      "slot3": { "role": "Support", "cardType": null },
+      "slot4": { "role": "Support", "cardType": null },
+      "slot5": { "role": "SUB_DPS", "cardType": null }
+    }
+  },
+  {
+    "id": 2,
+    "name": "AOE_DPS",
+    "slots": {
+      "slot1": { "role": "Sustain", "cardType": null },
+      "slot2": { "role": "DPS", "cardType": null },
+      "slot3": { "role": "Support", "cardType": null },
+      "slot4": { "role": "Support", "cardType": null },
+      "slot5": { "role": "SUB_DPS", "cardType": null }
+    }
+  },
+  {
+    "id": 3,
+    "name": "ST_DPS",
+    "slots": {
+      "slot1": { "role": "Sustain", "cardType": null },
+      "slot2": { "role": "DPS", "cardType": null },
+      "slot3": { "role": "Support", "cardType": null },
+      "slot4": { "role": "Support", "cardType": null },
+      "slot5": { "role": "SUB_DPS", "cardType": null }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Class Team",
+    "slots": {
+      "slot1": { "role": "Sustain", "cardType": null },
+      "slot2": { "role": "DPS", "cardType": null },
+      "slot3": { "role": "Sub_DPS", "cardType": null },
+      "slot4": { "role": "Support", "cardType": null },
+      "slot5": { "role": "SUB_DPS", "cardType": null }
+    }
+  },
+  {
+    "id": 5,
+    "name": "Card Team",
+    "slots": {
+      "slot1": { "role": "Sustain", "cardType": null },
+      "slot2": { "role": "DPS", "cardType": null },
+      "slot3": { "role": "Sub_DPS", "cardType": null },
+      "slot4": { "role": "Support", "cardType": null },
+      "slot5": { "role": "SUB_DPS", "cardType": null }
+    }
+  }
+]

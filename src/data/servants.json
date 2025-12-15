@@ -169,7 +169,7 @@
       "Independent Action A+",
       null
     ],
-    "image": "https://static.wikia.nocookie.net/fategrandorder/images/0/0f/CalamityJaneIllust01.jpg"
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9309660/9309660a.png"
   },
   {
     "id": 128,
@@ -192,7 +192,7 @@
       null,
       null
     ],
-    "image": "https://static.wikia.nocookie.net/fategrandorder/images/3/34/CE1227.webp"
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9304810/9304810a.png"
   },
   {
     "id": 146,
@@ -300,5 +300,128 @@
       null
     ],
     "image": "https://static.atlasacademy.io/JP/CharaGraph/202900/202900a@1.png"
+  },
+
+  {
+    "id": 109,
+    "name": "Izo",
+    "class": "Assassin",
+    "rarity": 3,
+    "role": "ST_DPS",
+    "cardType": "Arts",
+    "skills": [
+      "Manslayer A",
+      "Eye of the Mind (False) C",
+      "Swift and Powerful as a Falcon A+"
+    ],
+    "noblePhantasm": "Shimatsuken Settlement Sword",
+    "passives": ["Presence Concealment B"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/603340/603340a.png"
+  },
+  {
+    "id": 127,
+    "name": "Chiyome",
+    "class": "Assassin",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Arts",
+    "skills": [
+      "Witchcraft (Shrine Maiden) C++",
+      "Curse of Orochi B",
+      "Kōga-ryū A"
+    ],
+    "noblePhantasm": "Kuchiyose - Ibuki Daimyōjin Engi | Summoning - Omen of the Great God Ibuki",
+    "passives": ["Presence Concealment A+"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9310370/9310370a.png"
+  },
+  {
+    "id": 147,
+    "name": "Koyonskaya",
+    "class": "Assassin",
+    "rarity": 5,
+    "role": "Support",
+    "cardType": "Buster",
+    "skills": [
+      "Innovator Bunny A",
+      "Aptitude for Slaughter (Man) A",
+      "NFF Special A"
+    ],
+    "noblePhantasm": "Iz Tula Seven Drive | Spiritual Garment of Profound Brilliance - Type 79 Misfortune Fulfiller Grand Shrine",
+    "passives": [
+      "Riding B",
+      "Independent Action EX",
+      "Independent Manifestation C",
+      "Shapeshift A",
+      "Goddess Metamorphosis (Guns) B"
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9310750/9310750a.png"
+  },
+  {
+    "id": 158,
+    "name": "Yu Mei-ren",
+    "class": "Assassin",
+    "rarity": 4,
+    "role": "AOE_DPS",
+    "cardType": "Buster",
+    "skills": [
+      "Incarnated Elemental A",
+      "Heaven's Feathered Woman A+",
+      "Bloodsucker C"
+    ],
+    "noblePhantasm": "Eternal Lament | The Cursed-Blooded Immortal's Song of Grief",
+    "passives": ["Presence Concealment B"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9403680/9403680a.png"
+  },
+  {
+    "id": 163,
+    "name": "Hildr (Swimsuit)",
+    "class": "Assassin",
+    "rarity": 4,
+    "role": "AOE_DPS",
+    "cardType": "Arts",
+    "skills": [
+      "SMG/SAM66 B",
+      "Valkyrie Style Team Combat B+",
+      "Warmaidens' Troth EX"
+    ],
+    "noblePhantasm": "Fylgja Valkyrie | Last Assault - Heavenly Spears Halo",
+    "passives": ["Presence Concealment B", "Divinity A"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/604400/604400b@2.png"
+  },
+  {
+    "id": 164,
+    "name": "Osakabehime",
+    "class": "Assassin",
+    "rarity": 5,
+    "role": "Support",
+    "cardType": "Quick",
+    "skills": [
+      "Four Gods Divination (Hakuro) A",
+      "Chiyogami Manipulation EX",
+      "Castle Ghost A++"
+    ],
+    "noblePhantasm": "Hakuro-jō no Hyakki Hachitendō-sama | Lord Hachitendo of Hakuro Castle's Hundred Demons",
+    "passives": [
+      "Territory Creation A+",
+      "Presence Concealment (Shade) B",
+      "Divinity C"
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9309250/9309250a.png"
+  },
+  {
+    "id": 177,
+    "name": "Shiki",
+    "class": "Assassin",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Arts",
+    "skills": [
+      "Mystic Eyes of Death Perception A",
+      "Encounter Under the Rain B",
+      "Yin Yang B"
+    ],
+    "noblePhantasm": "Yuishiki - Chokushi no Magan | Vijñapti-mātratā - Mystic Eyes of Death Perception",
+    "passives": ["Presence Concealment C", "Independent Action A"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/602300/602300b@1.png"
   }
 ]
