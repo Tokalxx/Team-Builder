@@ -423,5 +423,226 @@
     "noblePhantasm": "Yuishiki - Chokushi no Magan | Vijñapti-mātratā - Mystic Eyes of Death Perception",
     "passives": ["Presence Concealment C", "Independent Action A"],
     "image": "https://static.atlasacademy.io/JP/CharaGraph/602300/602300b@1.png"
+  },
+  {
+    "id": 126,
+    "name": "Space Ishtar",
+    "class": "Avenger",
+    "rarity": 5,
+    "role": "AOE_DPS",
+    "cardType": "Arts",
+    "skills": ["Devil's Sugar A", "Venus Driver B", "Multiple Starling EX"],
+    "noblePhantasm": "Edin Shugra Quasar | Royal Crown Shining in the Primeval Universe",
+    "passives": [
+      "Magic Resistance C",
+      "Independent Action C",
+      "Goddess' Essence A++",
+      "Avenger EX",
+      "Oblivion Correction A",
+      "Self-Replenishment (Magic) B"
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9311410/9311410a.png"
+  },
+  {
+    "id": 131,
+    "name": "Maou Nobu",
+    "class": "Avenger",
+    "rarity": 5,
+    "role": "AOE_DPS",
+    "cardType": "Buster",
+    "skills": [
+      "It's Inevitable A-",
+      "As if it Was a Dream B++",
+      "Demon King of the Sixth Heaven EX"
+    ],
+    "noblePhantasm": "Hajunhenjō - Sanzen Daisen Ten Maō | Pāpīyas Metamorphosis - Demon King of a Billionfold Heavens",
+    "passives": [
+      "Avenger B-",
+      "Oblivion Correction E",
+      "Self-Replenishment (Magic) C"
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/1100700/1100700b@1.png"
+  },
+  {
+    "id": 140,
+    "name": "Taira",
+    "class": "Avenger",
+    "rarity": 5,
+    "role": "ST_DPS",
+    "cardType": "Quick",
+    "skills": [
+      "Genji, Accept Your Demise A++",
+      "Kagekiyo Never Dies EX",
+      "Mist of Azamaru B++"
+    ],
+    "noblePhantasm": "Shogyōmujō - Jōshahissui | All Things Must Pass - To Flourish is To Fall",
+    "passives": [
+      "Avenger EX",
+      "Oblivion Correction C",
+      "Self-Replenishment (Magic) D"
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/1101000/1101000b@2.png"
+  },
+  {
+    "id": 172,
+    "name": "Jalter",
+    "class": "Avenger",
+    "rarity": 5,
+    "role": "ST_DPS",
+    "cardType": "Buster",
+    "skills": ["Self-Modification EX", "Dragon Witch EX", "Ephemeral Dream EX"],
+    "noblePhantasm": "Le Grondement de la Haine | Roar, O' Rage of Mine",
+    "passives": [
+      "Avenger B",
+      "Oblivion Correction A",
+      "Self-Replenishment (Magic) A+"
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9309160/9309160a.png"
+  },
+  {
+    "id": 103,
+    "name": "Tamamo Cat",
+    "class": "Berserker",
+    "rarity": 4,
+    "role": "AOE_DPS",
+    "cardType": "Quick",
+    "skills": [
+      "Monstrous Strength B",
+      "Mantra: Feline Sunshine B",
+      "Shapeshift (Lunch) A"
+    ],
+    "noblePhantasm": "Sansan Nikkō Hiruyasumi Shuchi Nikurin | Opulence of Sunlight and Catnap",
+    "passives": ["Mad Enhancement C"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/701630/701630a.png"
+  },
+  {
+    "id": 104,
+    "name": "Beowulf",
+    "class": "Berserker",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Buster",
+    "skills": ["Berserk A", "Inspired Hero A+", "Perseverance of Old Age A"],
+    "noblePhantasm": "Grendel Buster | Primal Conflict",
+    "passives": ["Mad Enhancement E-"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/700800/700800b@2.png"
+  },
+  {
+    "id": 110,
+    "name": "Hercules",
+    "class": "Berserker",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Buster",
+    "skills": ["Bravery A+", "Eye of the Mind (False) B", "Indomitable A"],
+    "noblePhantasm": "Nine Lives | Slaying the Hundred Heads",
+    "passives": ["Mad Enhancement B", "Divinity A"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9308160/9308160a.png"
+  },
+  {
+    "id": 122,
+    "name": "Swimsuit Jalter",
+    "class": "Berserker",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Buster",
+    "skills": ["Schwarzwald Falke B", "Fallen Witch A+", "Meurs Où tu Dois EX"],
+    "noblePhantasm": "Völkermord Feuerdrache | Incinerated Heaven's Law - Massacring Dragon",
+    "passives": ["Mad Enhancement EX"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/703100/703100a@1.png"
+  },
+  {
+    "id": 134,
+    "name": "Florence Nightengale",
+    "class": "Berserker",
+    "rarity": 5,
+    "role": "Support",
+    "cardType": "Buster",
+    "skills": ["Nurse of Steel A+", "Human Comprehension A", "Angel's Cry EX"],
+    "noblePhantasm": "Nightingale Pledge | I Will Abstain From Whatever Is Deleterious And Mischievous",
+    "passives": ["Mad Enhancement EX"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9302220/9302220a.png"
+  },
+  {
+    "id": 138,
+    "name": "MHXA",
+    "class": "Berserker",
+    "rarity": 5,
+    "role": "ST_DPS",
+    "cardType": "Quick",
+    "skills": [
+      "∞ Chestnut Paste EX",
+      "Instantaneous Shadowless Blade C+",
+      "Sovereign's Invisible Hand C"
+    ],
+    "noblePhantasm": "Cross Calibur | Black Dragon Twinblade of Victory",
+    "passives": ["Mad Enhancement C", "Altereactor A"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9311060/9311060a.png"
+  },
+  {
+    "id": 150,
+    "name": "Morgan",
+    "class": "Berserker",
+    "rarity": 5,
+    "role": "AOE_DPS",
+    "cardType": "Buster",
+    "skills": [
+      "Charisma of Desire B",
+      "Protection of the Lake C",
+      "Beyond the Furthest End A"
+    ],
+    "noblePhantasm": "Roadless Camelot | The Now Unreachable Utopia",
+    "passives": [
+      "Mad Enhancement B",
+      "Magic Resistance A",
+      "Item Construction EX",
+      "Territory Creation B",
+      "Fae Eyes A"
+    ],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/9406630/9406630a.png"
+  },
+  {
+    "id": 154,
+    "name": "Nobu Berserker",
+    "class": "Berserker",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Buster",
+    "skills": [
+      "Foolish Murder Style A",
+      "Atsumori Beat B",
+      "Sixth Heaven Demon King of the Beach A-"
+    ],
+    "noblePhantasm": "Nobunaga THE Rock 'n' Roll | Papiyas, the Demon King of the Sixth Heaven ~Summer Fever~",
+    "passives": ["Mad Enhancement C"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/702900/702900a@1.png"
+  },
+  {
+    "id": 170,
+    "name": "Penth",
+    "class": "Berserker",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Buster",
+    "skills": ["Charisma B", "Golden Rule (Beauty) A", "Bellow of Ares A+"],
+    "noblePhantasm": "Outrage Amazon | A Hero to Die on My Rage",
+    "passives": ["Mad Enhancement EX", "Divinity B"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/702700/702700b@2.png"
+  },
+  {
+    "id": 176,
+    "name": "Kriemhild",
+    "class": "Berserker",
+    "rarity": 4,
+    "role": "ST_DPS",
+    "cardType": "Arts",
+    "skills": [
+      "Revenge Plan (Rampaging) B++",
+      "Reciprocated Slaughter A",
+      "Affection of the Court Lady EX"
+    ],
+    "noblePhantasm": "Balmung Kriemhild | Exiled Demonic Sword - Holy Queen's Forfeiture",
+    "passives": ["Mad Enhancement EX"],
+    "image": "https://static.atlasacademy.io/JP/CharaGraph/704200/704200a@1.png"
   }
 ]
