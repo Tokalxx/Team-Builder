@@ -1,27 +1,18 @@
-// preload.js
-import { contextBridge } from "electron"; // only contextBridge
-import fs from "fs";
-import path from "path";
+// electron/preload.js
 
-// Use a folder relative to preload.js
-const dataDir = path.join(__dirname, "data");
+const { contextBridge, ipcRenderer } = require("electron");
 
-// Ensure folder exists
-if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+// Expose the CRUD methods to the renderer process
+contextBridge.exposeInMainWorld("electronAPI", {
+  // READ
+  readItems: () => ipcRenderer.invoke("read-items"),
 
-contextBridge.exposeInMainWorld("fileAPI", {
-  saveJSON: (filename, data) => {
-    const filePath = path.join(dataDir, `${filename}.json`);
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf-8");
-  },
-  readJSON: (filename) => {
-    const filePath = path.join(dataDir, `${filename}.json`);
-    if (!fs.existsSync(filePath)) return null;
-    return JSON.parse(fs.readFileSync(filePath, "utf-8"));
-  },
-  listJSON: () =>
-    fs
-      .readdirSync(dataDir)
-      .filter((f) => f.endsWith(".json"))
-      .map((f) => f.replace(".json", "")),
+  // CREATE
+  createItem: (newItem) => ipcRenderer.invoke("create-item", newItem),
+
+  // UPDATE
+  updateItem: (updatedItem) => ipcRenderer.invoke("update-item", updatedItem),
+
+  // DELETE
+  deleteItem: (itemId) => ipcRenderer.invoke("delete-item", itemId),
 });
