@@ -1,8 +1,243 @@
-#root {
-  border: green solid;
+/* ================================
+   SERVANT GRID
+================================ */
+.servant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+  padding: 1rem;
 }
 
-.content-div {
-  border: red solid;
+/* ================================
+   SERVANT CARD
+================================ */
+.servant-card {
+  background: #121212;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #f0f0f0;
+}
+
+.servant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ================================
+   RARITY BORDERS
+================================ */
+.rarity-5 {
+  border: 2px solid gold;
+}
+
+.rarity-4 {
+  border: 2px solid violet;
+}
+
+.rarity-3 {
+  border: 2px solid deepskyblue;
+}
+
+.rarity-2 {
+  border: 2px solid limegreen;
+}
+
+.rarity-1 {
+  border: 2px solid gray;
+}
+
+/* ================================
+   IMAGE
+================================ */
+.servant-image {
+  background: linear-gradient(145deg, #1f1f1f, #0f0f0f);
   padding: 0.5rem;
+}
+
+.servant-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================================
+   HEADER
+================================ */
+.servant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+}
+
+.servant-header h3 {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.rarity {
+  color: gold;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+/* ================================
+   BADGES
+================================ */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0 0.75rem;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #333;
+  white-space: nowrap;
+}
+
+.badge.class {
+  background: #6a5acd;
+}
+
+.badge.role {
+  background: #2e8b57;
+}
+
+.badge.card {
+  background: #b22222;
+}
+
+/* ================================
+   INFO SECTION
+================================ */
+.servant-info {
+  font-size: 0.75rem;
+  padding: 0.75rem;
+  line-height: 1.4;
+}
+
+.servant-info p {
+  margin: 0.3rem 0;
+}
+
+.servant-info strong {
+  color: #ccc;
+}
+
+/* ================================
+   RESPONSIVE TWEAKS
+================================ */
+@media (max-width: 480px) {
+  .servant-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .servant-header h3 {
+    font-size: 0.9rem;
+  }
+}
+
+/* ================================
+   FORM CONTAINER
+================================ */
+.add-servant-form {
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #121212;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+  color: #f1f1f1;
+}
+
+/* ================================
+   FORM LAYOUT
+================================ */
+.add-servant-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* ================================
+   INPUTS & SELECTS
+================================ */
+.add-servant-form input,
+.add-servant-form select {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.6rem 0.7rem;
+  color: #fff;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border 0.15s ease, box-shadow 0.15s ease;
+}
+
+.add-servant-form input::placeholder {
+  color: #888;
+}
+
+.add-servant-form input:focus,
+.add-servant-form select:focus {
+  border-color: #6a5acd;
+  box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.3);
+}
+
+/* ================================
+   SELECT DROPDOWN
+================================ */
+.add-servant-form select {
+  cursor: pointer;
+}
+
+/* ================================
+   BUTTON
+================================ */
+.add-servant-form button {
+  margin-top: 0.8rem;
+  background: linear-gradient(135deg, #6a5acd, #836fff);
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.add-servant-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(106, 90, 205, 0.5);
+}
+
+.add-servant-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(106, 90, 205, 0.4);
+}
+
+/* ================================
+   SMALL TEXT / HELPERS
+================================ */
+.add-servant-form small {
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 520px) {
+  .add-servant-form {
+    margin: 1rem;
+    padding: 1.2rem;
+  }
 }
