@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ServantCard from "../components/servant_card";
-import "../components/styles/servant_card.css";
 
 export default function Servant() {
   const [servants, setServants] = useState([]);

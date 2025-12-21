@@ -4,7 +4,6 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Servant from "./pages/Servant";
 import Teams from "./pages/Teams";
-import servantRecord from "./data/servants.json"; //Temp import
 import "./App.css";
 
 function App() {

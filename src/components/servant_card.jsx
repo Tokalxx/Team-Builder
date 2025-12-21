@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/servant_card.css";
 
 export default function servant_card({ servant }) {
   return (
@@ -8,13 +9,7 @@ export default function servant_card({ servant }) {
       </div>
       <div class="servant-data">
         <div>{servant.name}</div>
-        <div>{servant.rarity}</div>
         <div>{servant.class}</div>
-        <div>{servant.role}</div>
-        <div>{servant.cardType}</div>
-        <div>{servant.skills[0]}</div>
-        <div>{servant.np}</div>
-        <div>{servant.passives[0]}</div>
       </div>
     </div>
   );

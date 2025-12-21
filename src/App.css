@@ -9,23 +9,6 @@
 }
 
 /* ================================
-   SERVANT CARD
-================================ */
-.servant-card {
-  background: #121212;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  color: #f0f0f0;
-}
-
-.servant-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-/* ================================
    RARITY BORDERS
 ================================ */
 .rarity-5 {
@@ -46,20 +29,6 @@
 
 .rarity-1 {
   border: 2px solid gray;
-}
-
-/* ================================
-   IMAGE
-================================ */
-.servant-image {
-  background: linear-gradient(145deg, #1f1f1f, #0f0f0f);
-  padding: 0.5rem;
-}
-
-.servant-image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
 }
 
 /* ================================
