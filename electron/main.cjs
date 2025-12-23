@@ -34,6 +34,7 @@ app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
 });
 
+//update Data
 ipcMain.handle("update-item", (event, updatedItem) => {
   try {
     let items = [];
@@ -55,6 +56,7 @@ ipcMain.handle("update-item", (event, updatedItem) => {
   }
 });
 
+//Delete Data
 ipcMain.handle("delete-item", (event, itemId) => {
   try {
     let items = [];
@@ -71,6 +73,7 @@ ipcMain.handle("delete-item", (event, itemId) => {
   }
 });
 
+//Create Data
 ipcMain.handle("create-item", (event, newItem) => {
   try {
     let items = [];
@@ -88,6 +91,7 @@ ipcMain.handle("create-item", (event, newItem) => {
   }
 });
 
+//Raed Data
 ipcMain.handle("read-items", () => {
   try {
     let items = [];

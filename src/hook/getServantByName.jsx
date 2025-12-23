@@ -22,7 +22,7 @@ export default function getServantByName(name) {
         const data = await getServant(name);
 
         if (isMounted && data.length > 0) {
-          const topFive = data.slice(0, 5);
+          const topFive = data.slice(0, 10);
 
           const mapped = topFive.map((s) => ({
             id: s.id,

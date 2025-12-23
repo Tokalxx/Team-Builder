@@ -5,11 +5,10 @@ export const getServant = async (name) => {
     name,
     lore: "false",
     excludeCollectionNo: "0",
-    type: "normal",
   });
 
   const response = await fetch(
-    `${BASE_URL}/nice/NA/servant/search?${params.toString()}`, // ✅ correct endpoint
+    `${BASE_URL}/nice/NA/servant/search?${params.toString()}`,
     {
       method: "GET",
       headers: {
