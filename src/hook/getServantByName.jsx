@@ -30,6 +30,7 @@ export default function getServantByName(name) {
             class: s.className,
             rarity: s.rarity,
             cardType: "",
+            role: s.noblePhantasms?.[0]?.effectFlags,
             skills: s.skills?.map((skill) => skill.name) ?? [],
             np: s.noblePhantasms?.[0]?.name ?? "",
             passives: s.classPassive?.map((p) => p.name) ?? [],

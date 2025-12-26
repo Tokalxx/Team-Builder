@@ -1,36 +1,65 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import ServantTeamCard from "../components/teams/servantTeamCard";
 import TeamTable from "../components/teams/TeamTable";
+import AddServant from "../components/teams/AddServant";
+import teamData from "../data/teams.json";
 import "../App.css";
 
 export default function Teams() {
+  const teams = teamData;
+  const slotIndex = 0;
+
+  const [servants, setServants] = useState([]);
+  const [role, setRole] = useState(teams[slotIndex].slots.slot1.role);
+  const [openRole, setOpenRole] = useState(false);
+
   //Trying to create a function that will return an array of servants that match
   //the role of the clicked slot
-  const handleGetServant = async () => {
-    try {
-      const data = await window.electronAPI.readItems();
-    } catch (error) {
-      console.log("Failed to load servants", error);
-    }
-  };
+  useEffect(() => {
+    const loadServants = async () => {
+      try {
+        const data = await window.electronAPI.readItems();
+        setServants(data);
+      } catch (error) {
+        console.log("Failed to load servants", error);
+      }
+    };
+
+    loadServants();
+  }, []);
+
   return (
     <div>
       <div className="team-wrapper">
-        <lable>Team Type 1 </lable>
-        <lable>Team Type 2 </lable>
-        <lable>Team Type 3 </lable>
-        <lable>Team Type 4 </lable>
-        <div className="team-grid">
-          <ServantTeamCard />
-          <ServantTeamCard />
-          <ServantTeamCard />
-          <ServantTeamCard />
-          <ServantTeamCard />
-          <ServantTeamCard />
+        {teams.map((team) => (
+          <label> {team.name} </label>
+        ))}
+        <div className="slot-grid">
+          {Object.entries(teams[slotIndex].slots).map(([slotKey, slotData]) => (
+            <ServantTeamCard
+              key={slotKey}
+              slotKey={slotKey}
+              role={slotData.role}
+              onClick={() => {
+                setRole(slotData.role);
+                setOpenRole(true);
+              }}
+            />
+          ))}
         </div>
-        <div className="team-table">
-          <TeamTable />
-        </div>
+        <div className="team-table"></div>
+      </div>
+
+      <div className="openRole-wrapper">
+        <button onClick={() => setOpenRole(false)}>X</button>
+        {openRole &&
+          servants
+            .filter(
+              (s) => s.role?.trim().toLowerCase() === role?.trim().toLowerCase()
+            )
+            .map((servant) => (
+              <AddServant key={servant.id} servant={servant} />
+            ))}
       </div>
     </div>
   );
