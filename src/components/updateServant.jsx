@@ -47,6 +47,17 @@ export default function UpdateServant({ servant, onSave }) {
         </select>
       </label>
 
+      <label>
+        Role
+        <input
+          type="text"
+          value={editedServant.role}
+          onChange={(e) =>
+            setEditedServant({ ...editedServant, role: e.target.value })
+          }
+        />
+      </label>
+
       {/* Rarity */}
       <label>
         Rarity

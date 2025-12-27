@@ -32,7 +32,7 @@ export default function Teams() {
     <div>
       <div className="team-wrapper">
         {teams.map((team) => (
-          <label> {team.name} </label>
+          <label key={team.id}> {team.name} </label>
         ))}
         <div className="slot-grid">
           {Object.entries(teams[slotIndex].slots).map(([slotKey, slotData]) => (
@@ -54,12 +54,17 @@ export default function Teams() {
         <button onClick={() => setOpenRole(false)}>X</button>
         {openRole &&
           servants
-            .filter(
-              (s) => s.role?.trim().toLowerCase() === role?.trim().toLowerCase()
+            .filter((s) =>
+              String(s.role).toLowerCase().includes(String(role).toLowerCase())
             )
-            .map((servant) => (
-              <AddServant key={servant.id} servant={servant} />
-            ))}
+            .map((servant) => {
+              console.log(
+                servant.name,
+                "List of filtered servants",
+                servant.role
+              );
+              return <AddServant key={servant.id} servant={servant} />;
+            })}
       </div>
     </div>
   );
