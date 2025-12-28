@@ -15,16 +15,6 @@ export default function AddServants() {
     }
   };
 
-  const returnRole = (role) => {
-    if (role.toString() === "attackEnemyOne") {
-      return "ST_DPS";
-    } else if (role.toString() === "attackEnemyAll") {
-      return "AOE_DPS";
-    } else {
-      return "Support";
-    }
-  };
-
   return (
     <div>
       {/* Search Input */}
@@ -68,7 +58,7 @@ export default function AddServants() {
                 <strong>Card Type:</strong> {s.cardType}
               </p>
               <p>
-                <strong>Role: </strong> {returnRole(s.role)}
+                <strong>Role: </strong> {s.role}
               </p>
 
               <p>

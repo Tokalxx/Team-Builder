@@ -14,6 +14,17 @@ export default function getServantByName(name) {
 
     let isMounted = true;
 
+    const setServantRole = (text) => {
+      let role = text.toString();
+      if (role === "attackEnemyAll") {
+        return "AOE_DPS";
+      } else if (role === "attackEnemyOne") {
+        return "ST_DPS";
+      } else {
+        return "Support";
+      }
+    };
+
     const fetchServant = async () => {
       try {
         setLoading(true);
@@ -30,7 +41,7 @@ export default function getServantByName(name) {
             class: s.className,
             rarity: s.rarity,
             cardType: "",
-            role: s.noblePhantasms?.[0]?.effectFlags,
+            role: setServantRole(s.noblePhantasms?.[0]?.effectFlags),
             skills: s.skills?.map((skill) => skill.name) ?? [],
             np: s.noblePhantasms?.[0]?.name ?? "",
             passives: s.classPassive?.map((p) => p.name) ?? [],
