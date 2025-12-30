@@ -58,7 +58,7 @@ export default function AddServants() {
                 <strong>Card Type:</strong> {s.cardType}
               </p>
               <p>
-                <strong>Role: </strong> {s.role}
+                <strong>Role: </strong> {s.role.join(", ")}
               </p>
 
               <p>

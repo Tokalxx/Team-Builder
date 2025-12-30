@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getServant } from "../api/servantServices";
+import { getServantRoles, classifyServantRoles } from "../logic/ServantData.js";
 
 export default function getServantByName(name) {
   const [servant, setServant] = useState([]);
@@ -14,17 +15,6 @@ export default function getServantByName(name) {
 
     let isMounted = true;
 
-    const setServantRole = (text) => {
-      let role = text.toString();
-      if (role === "attackEnemyAll") {
-        return "AOE_DPS";
-      } else if (role === "attackEnemyOne") {
-        return "ST_DPS";
-      } else {
-        return "Support";
-      }
-    };
-
     const fetchServant = async () => {
       try {
         setLoading(true);
@@ -33,20 +23,25 @@ export default function getServantByName(name) {
         const data = await getServant(name);
 
         if (isMounted && data.length > 0) {
-          const topFive = data.slice(0, 10);
+          const results = data.slice(0, 10);
 
-          const mapped = topFive.map((s) => ({
-            id: s.id,
-            name: s.name,
-            class: s.className,
-            rarity: s.rarity,
-            cardType: "",
-            role: setServantRole(s.noblePhantasms?.[0]?.effectFlags),
-            skills: s.skills?.map((skill) => skill.name) ?? [],
-            np: s.noblePhantasms?.[0]?.name ?? "",
-            passives: s.classPassive?.map((p) => p.name) ?? [],
-            image: s.extraAssets?.charaGraph?.ascension?.[4] ?? "",
-          }));
+          const mapped = results.map((s) => {
+            const roleTotal = classifyServantRoles(s);
+            const role = getServantRoles(roleTotal);
+
+            return {
+              id: s.id,
+              name: s.name,
+              class: s.className,
+              rarity: s.rarity,
+              cardType: "",
+              role: role,
+              skills: s.skills?.map((skill) => skill.name) ?? [],
+              np: s.noblePhantasms?.[0]?.name ?? "",
+              passives: s.classPassive?.map((p) => p.name) ?? [],
+              image: s.extraAssets?.charaGraph?.ascension?.[4] ?? "",
+            };
+          });
 
           setServant(mapped);
         } else if (isMounted) {
