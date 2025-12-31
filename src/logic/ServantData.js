@@ -1,11 +1,11 @@
 const EFFECTS = {
   DAMAGE_UP: [
-    / Quick Card effectiveness/i,
-    / Arts Card effectiveness/i,
-    / Buster Card effectiveness/i,
-    / ATK/i,
-    / Attack/i,
-    / NP Strength/i,
+    /Quick Card effectiveness/i,
+    /Arts Card effectiveness/i,
+    /Buster Card effectiveness/i,
+    /ATK/i,
+    /Attack/i,
+    /NP Strength/i,
     /Critical Strength/i,
     /Ignore DEF/i,
     /Ignore Invincible/i,
@@ -36,7 +36,7 @@ const EFFECTS = {
 
 const TARGETS = {
   SELF: [/your/i, /yourself/i],
-  ALLY: [/ally/i, /ally's/i],
+  ALLY: [/ally/i, /allies/i],
   ENEMY: [/enemy/i, /enemies/i],
 };
 
@@ -51,14 +51,14 @@ const ROLE = [
     role: "Support",
     value: 3,
     when: ({ effects, targets }) =>
-      effects.includes("NP_GAIN") && targets.includes("ALLY"),
+      effects.includes("NP_GAIN") ||
+      (effects.includes("DAMAGE_UP") && targets.includes("ALLY")),
   },
   {
     role: "Sustain",
     value: 2,
     when: ({ effects }) =>
-      effects.includes("SURVIVAL") &&
-      (targets.includes("ALLY") || targets.includes("SELF")),
+      effects.includes("SURVIVAL") && targets.includes("ALLY"),
   },
   {
     role: "Debuffer",
@@ -97,11 +97,7 @@ function scoreSkill(skillText) {
   const { effects, targets } = skillDataExtract(skillText);
 
   return {
-    DPS:
-      effects.includes("DAMAGE_UP") &&
-      (targets.includes("SELF") || targets.includes("ENEMY"))
-        ? 1
-        : 0,
+    DPS: effects.includes("DAMAGE_UP") && targets.includes("SELF") ? 1 : 0,
 
     Support: effects.includes("NP_GAIN") && targets.includes("ALLY") ? 1 : 0,
 
