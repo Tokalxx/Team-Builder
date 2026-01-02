@@ -1,3 +1,8 @@
+// =========================================
+// EFFECT KEYWORDS
+// Maps high-level effect categories to regex
+// patterns found in skill / NP descriptions
+// =========================================
 const EFFECTS = {
   DAMAGE_UP: [
     /Quick Card effectiveness/i,
@@ -31,15 +36,34 @@ const EFFECTS = {
     /restore HP/i,
     /Guts/i,
   ],
-  DEBUFF: [/Charm/i, /immobilize/i, /NP Seal/i, /Skill Seal/i, /Stun/i],
+  DEBUFF: [
+    /Charm/i,
+    /immobilize/i,
+    /NP Seal/i,
+    /Skill Seal/i,
+    /Stun/i,
+    /Curse/i,
+    /decrease Charge/i,
+  ],
 };
 
+// =========================================
+// TARGET KEYWORDS
+// Determines who the skill affects
+// =========================================
 const TARGETS = {
   SELF: [/your/i, /yourself/i],
   ALLY: [/ally/i, /allies/i],
   ENEMY: [/enemy/i, /enemies/i],
 };
 
+// =========================================
+// ROLE RULES
+// Each rule describes:
+// - role name
+// - priority value
+// - condition for when the role applies
+// =========================================
 const ROLE = [
   {
     role: "DPS",
@@ -57,7 +81,7 @@ const ROLE = [
   {
     role: "Sustain",
     value: 2,
-    when: ({ effects }) =>
+    when: ({ effects, targets }) =>
       effects.includes("SURVIVAL") && targets.includes("ALLY"),
   },
   {
@@ -68,22 +92,31 @@ const ROLE = [
   },
 ];
 
+// =========================================
+// NORMALIZE TEXT
+// Makes skill text consistent for regex matching
+// =========================================
 function normalize(text) {
   return text.toLowerCase().replace(/["▲]/g, "").replace(/\s+/g, " ").trim();
 }
 
+// =========================================
+// EXTRACT EFFECTS & TARGETS FROM SKILL TEXT
+// =========================================
 export function skillDataExtract(skillText) {
   const skills = normalize(skillText);
 
   const effects = [];
   const targets = [];
 
+  // Check which EFFECT categories appear in text
   for (const [effect, patterns] of Object.entries(EFFECTS)) {
     if (patterns.some((p) => p.test(skills))) {
       effects.push(effect);
     }
   }
 
+  // Check which TARGET categories appear in text
   for (const [target, patterns] of Object.entries(TARGETS)) {
     if (patterns.some((p) => p.test(skills))) {
       targets.push(target);
@@ -93,26 +126,40 @@ export function skillDataExtract(skillText) {
   return { effects, targets };
 }
 
+// =========================================
+// SCORE A SINGLE SKILL / NP
+// Each role receives either 0 or 1
+// =========================================
 function scoreSkill(skillText) {
-  const { effects, targets } = skillDataExtract(skillText);
+  const data = skillDataExtract(skillText);
 
-  return {
-    DPS: effects.includes("DAMAGE_UP") && targets.includes("SELF") ? 1 : 0,
-
-    Support: effects.includes("NP_GAIN") && targets.includes("ALLY") ? 1 : 0,
-
-    Sustain: effects.includes("SURVIVAL") && targets.includes("ALLY") ? 1 : 0,
-
-    Debuffer: effects.includes("DEBUFF") && targets.includes("ENEMY") ? 1 : 0,
+  const scores = {
+    DPS: 0,
+    Support: 0,
+    Sustain: 0,
+    Debuffer: 0,
   };
+
+  ROLE.forEach(({ role, when }) => {
+    if (when(data)) {
+      scores[role] += 1;
+    }
+  });
+
+  return scores;
 }
 
+// =========================================
+// CLASSIFY A SERVANT BASED ON ALL SKILLS + NP
+// =========================================
 export function classifyServantRoles(servant) {
+  // Collect all skill and NP descriptions
   const texts = [
     ...(servant.skills?.map((s) => s.detail) ?? []),
     ...(servant.noblePhantasms?.map((np) => np.detail) ?? []),
   ];
 
+  // Running totals per role
   const totals = {
     DPS: 0,
     Support: 0,
@@ -120,6 +167,7 @@ export function classifyServantRoles(servant) {
     Debuffer: 0,
   };
 
+  // Score each skill / NP and accumulate totals
   texts.forEach((text) => {
     const score = scoreSkill(text);
     Object.keys(totals).forEach((role) => {
@@ -132,10 +180,13 @@ export function classifyServantRoles(servant) {
 
 export function getServantRoles(totals) {
   return Object.entries(totals)
-    .filter(([_, value]) => value > 0)
+    .filter(([_, value]) => value > 1)
     .map(([role]) => role);
 }
 
+// =========================================
+//Currently Unset
+// =========================================
 function skillClassify(skills) {
   const data = skillDataExtract(skills);
   let roles = new Set();
