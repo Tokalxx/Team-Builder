@@ -34,3 +34,23 @@
   text-align: center;
   padding: 0.25rem;
 }
+
+/* card for filtered servants*/
+.servant-card_team {
+  border: red solid 1px;
+  display: flex;
+  padding: 1rem;
+  column-gap: 1rem;
+  width: 50%;
+}
+
+.servant-card_team img {
+  max-height: 10rem;
+}
+
+.servant-card_team--details {
+  border: red solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
