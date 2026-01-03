@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import ServantTeamCard from "../components/teams/servantTeamCard";
 import TeamTable from "../components/teams/TeamTable";
 import AddServant from "../components/teams/AddServant";
-import teamData from "../data/teams.json";
+import servantTeams from "../data/s_team.json";
 import "../App.css";
 
 export default function Teams() {
-  const teams = teamData;
-  const slotIndex = 0;
+  const teams = servantTeams;
+
+  const [slotIndex, setSlotIndex] = useState(0);
 
   const [servants, setServants] = useState([]);
-  const [role, setRole] = useState(teams[slotIndex].slots.slot1.role);
+  const [role, setRole] = useState(null);
   const [openRole, setOpenRole] = useState(false);
 
   //Trying to create a function that will return an array of servants that match
@@ -31,15 +32,18 @@ export default function Teams() {
   return (
     <div>
       <div className="team-wrapper">
-        {teams.map((team) => (
-          <label key={team.id}> {team.name} </label>
+        {teams.map((team, index) => (
+          <label key={team.id} onClick={() => setSlotIndex(index)}>
+            {" "}
+            {team.name}{" "}
+          </label>
         ))}
         <div className="slot-grid">
-          {Object.entries(teams[slotIndex].slots).map(([slotKey, slotData]) => (
+          {teams[slotIndex].Slots.map((role, index) => (
             <ServantTeamCard
-              key={slotKey}
-              slotKey={slotKey}
-              role={slotData.role}
+              key={index}
+              slotKey={`slot-${index + 1}`}
+              role={role}
               onClick={() => {
                 setRole(slotData.role);
                 setOpenRole(true);

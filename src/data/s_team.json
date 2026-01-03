@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Basic",
+    "Slots": ["Sustain", "Main_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
+  },
+  {
+    "id": 1,
+    "name": "AOE_DPS",
+    "Slots": ["Sustain", "Main_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
+  },
+  {
+    "id": 1,
+    "name": "ST_DPS",
+    "Slots": ["Sustain", "Main_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
+  },
+  {
+    "id": 1,
+    "name": "Class_Team",
+    "Slots": ["Sustain", "Main_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
+  },
+  {
+    "id": 1,
+    "name": "Card_Type",
+    "Slots": ["Sustain", "Main_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
+  }
+]
