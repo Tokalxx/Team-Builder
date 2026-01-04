@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ServantTeamCard from "../components/teams/servantTeamCard";
+import ServantTeamCard from "../components/teams/ServantTeamCard";
 import TeamTable from "../components/teams/TeamTable";
 import AddServant from "../components/teams/AddServant";
 import servantTeams from "../data/s_team.json";
@@ -29,13 +29,26 @@ export default function Teams() {
     loadServants();
   }, []);
 
+  <div className="slot-grid">
+    {teams[slotIndex]?.Slots.map((role, index) => (
+      <ServantTeamCard
+        key={index}
+        slotKey={`slot-${index + 1}`}
+        role={role}
+        onClick={() => {
+          setRole(role);
+          setOpenRole(true);
+        }}
+      />
+    ))}
+  </div>;
+
   return (
     <div>
       <div className="team-wrapper">
         {teams.map((team, index) => (
           <label key={team.id} onClick={() => setSlotIndex(index)}>
-            {" "}
-            {team.name}{" "}
+            {team.name}
           </label>
         ))}
         <div className="slot-grid">
@@ -45,7 +58,7 @@ export default function Teams() {
               slotKey={`slot-${index + 1}`}
               role={role}
               onClick={() => {
-                setRole(slotData.role);
+                setRole(role);
                 setOpenRole(true);
               }}
             />

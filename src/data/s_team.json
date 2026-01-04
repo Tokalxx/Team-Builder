@@ -5,23 +5,30 @@
     "Slots": ["Sustain", "Main_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "AOE_DPS",
-    "Slots": ["Sustain", "Main_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
+    "Slots": ["Sustain", "AOE_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
   },
   {
-    "id": 1,
+    "id": 3,
     "name": "ST_DPS",
-    "Slots": ["Sustain", "Main_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
+    "Slots": ["Sustain", "ST_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
   },
   {
-    "id": 1,
+    "id": 4,
     "name": "Class_Team",
-    "Slots": ["Sustain", "Main_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
+    "Slots": [
+      "Sustain",
+      "Class Team",
+      "Support",
+      "Support",
+      "Sub_DPS",
+      "Anchor"
+    ]
   },
   {
-    "id": 1,
+    "id": 5,
     "name": "Card_Type",
-    "Slots": ["Sustain", "Main_DPS", "Support", "Support", "Sub_DPS", "Anchor"]
+    "Slots": ["Sustain", "Card Team", "Support", "Support", "Sub_DPS", "Anchor"]
   }
 ]
