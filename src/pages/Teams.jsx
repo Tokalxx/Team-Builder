@@ -9,7 +9,6 @@ export default function Teams() {
   const teams = servantTeams;
 
   const [slotIndex, setSlotIndex] = useState(0);
-
   const [servants, setServants] = useState([]);
   const [role, setRole] = useState(null);
   const [openRole, setOpenRole] = useState(false);
