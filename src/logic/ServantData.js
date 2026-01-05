@@ -45,6 +45,7 @@ const EFFECTS = {
     /Curse/i,
     /decrease Charge/i,
   ],
+  DAMEGE_TO: [/Deal very heavy damage/i, /Deal significant damage /i],
 };
 
 // =========================================
@@ -54,7 +55,8 @@ const EFFECTS = {
 const TARGETS = {
   SELF: [/your/i, /yourself/i],
   ALLY: [/ally/i, /allies/i],
-  ENEMY: [/enemy/i, /enemies/i],
+  ENEMY: [/enemy/i],
+  ENEMIES: [/enemies/i],
 };
 
 // =========================================
@@ -66,10 +68,20 @@ const TARGETS = {
 // =========================================
 const ROLE = [
   {
-    role: "DPS",
+    role: "AOE_DPS",
     value: 1,
     when: ({ effects, targets }) =>
-      effects.includes("DAMAGE_UP") && targets.includes("SELF"),
+      effects.includes("DAMAGE_UP") &&
+      targets.includes("SELF") &&
+      targets.includes("ENEMIES"),
+  },
+  {
+    role: "ST_DPS",
+    value: 1,
+    when: ({ effects, targets }) =>
+      effects.includes("DAMAGE_UP") &&
+      targets.includes("SELF") &&
+      targets.includes("ENEMY"),
   },
   {
     role: "Support",
@@ -134,7 +146,8 @@ function scoreSkill(skillText) {
   const data = skillDataExtract(skillText);
 
   const scores = {
-    DPS: 0,
+    AOE_DPS: 0,
+    ST_DPS: 0,
     Support: 0,
     Sustain: 0,
     Debuffer: 0,
@@ -161,7 +174,8 @@ export function classifyServantRoles(servant) {
 
   // Running totals per role
   const totals = {
-    DPS: 0,
+    AOE_DPS: 0,
+    ST_DPS: 0,
     Support: 0,
     Sustain: 0,
     Debuffer: 0,
