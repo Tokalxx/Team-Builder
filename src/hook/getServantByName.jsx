@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getServant } from "../api/servantServices";
-import { getServantRoles, classifyServantRoles } from "../logic/ServantData.js";
+import { assignRole } from "../logic/ServantData.js";
 
 export default function getServantByName(name) {
   const [servant, setServant] = useState([]);
@@ -26,16 +26,13 @@ export default function getServantByName(name) {
           const results = data.slice(0, 10);
 
           const mapped = results.map((s) => {
-            const roleTotal = classifyServantRoles(s);
-            const role = getServantRoles(roleTotal);
-
             return {
               id: s.id,
               name: s.name,
               class: s.className,
               rarity: s.rarity,
               cardType: "",
-              role: role,
+              role: assignRole(s.noblePhantasms?.[0]?.effectFlags ?? []),
               skills: s.skills?.map((skill) => skill.name) ?? [],
               np: s.noblePhantasms?.[0]?.name ?? "",
               passives: s.classPassive?.map((p) => p.name) ?? [],
