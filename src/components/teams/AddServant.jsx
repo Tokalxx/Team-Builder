@@ -10,7 +10,7 @@ export default function AddServant({ servant }) {
         <div className="servant-card_team--details">
           <h3>{servant.name}</h3>
           <br />
-          <label>{servant.role.join(", ")}</label>
+          <label>{servant.role.join}</label>
           <br />
           <label>Card Type</label>
         </div>
