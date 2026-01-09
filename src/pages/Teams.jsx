@@ -13,6 +13,27 @@ export default function Teams() {
   const [role, setRole] = useState(null);
   const [openRole, setOpenRole] = useState(false);
 
+  const [draggedServant, setDraggedServant] = useState(null);
+  const [servantCard, setServantCard] = useState([]);
+  const [servantSlot, setServsantSlot] = useState({});
+
+  const handleDragStart = (e, servant) => {
+    setDraggedServant(servant);
+    e.dataTransfer.effectAllowed = "move";
+  };
+
+  const handleDrop = (slotIndex) => (e) => {
+    e.preventDefault();
+    if (!draggedServant) return;
+
+    setServsantSlot((prev) => ({
+      ...prev,
+      [slotIndex]: draggedServant,
+    }));
+
+    setDraggedServant(null);
+  };
+
   //Trying to create a function that will return an array of servants that match
   //the role of the clicked slot
   useEffect(() => {
@@ -34,10 +55,13 @@ export default function Teams() {
         key={index}
         slotKey={`slot-${index + 1}`}
         role={role}
+        servantInSlot={servantSlot[index]} // shows the dropped servant
         onClick={() => {
           setRole(role);
           setOpenRole(true);
         }}
+        onDragOver={(e) => e.preventDefault()} // allows dropping
+        onDrop={handleDrop(index)} // slot-aware drop
       />
     ))}
   </div>;
@@ -51,6 +75,7 @@ export default function Teams() {
           </label>
         ))}
         <div className="slot-grid">
+          {/* Dropzone */}
           {teams[slotIndex].Slots.map((role, index) => (
             <ServantTeamCard
               key={index}
@@ -59,6 +84,8 @@ export default function Teams() {
               onClick={() => {
                 setRole(role);
                 setOpenRole(true);
+                onDragOver((e) => e.preventDefault());
+                onDrop = { handleDrop };
               }}
             />
           ))}
@@ -79,7 +106,13 @@ export default function Teams() {
                 "List of filtered servants",
                 servant.role
               );
-              return <AddServant key={servant.id} servant={servant} />;
+              return (
+                <AddServant
+                  key={servant.id}
+                  servant={servant}
+                  onDragStart={handleDragStart}
+                />
+              );
             })}
       </div>
     </div>
