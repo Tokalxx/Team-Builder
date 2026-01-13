@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import getServantByName from "../hook/getServantByName";
+import "./styles/AddServant.css";
 
 export default function AddServants() {
   const [name, setName] = useState("");
@@ -30,79 +31,88 @@ export default function AddServants() {
   };
 
   return (
-    <div>
+    <div className="add-servants">
       {/* Search Input */}
       <input
+        className="servant-search-input"
         type="text"
         placeholder="Enter servant name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
 
-      {/* Loading & Error */}
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
+      {/* Status Messages */}
+      {loading && <p className="servant-loading">Loading...</p>}
+      {error && <p className="servant-error">Error: {error}</p>}
+      {savedMessage && <p className="servant-saved-message">{savedMessage}</p>}
 
-      {/* Servant Data */}
+      {/* Servant List */}
       {!loading && servant.length > 0 && (
-        <div>
+        <div className="servant-list">
           {servant
             .filter((s) => !filterServants.some((fs) => fs.name === s.name))
             .map((s) => (
-              <div
-                key={s.id}
-                style={{
-                  border: "1px solid #ccc",
-                  margin: "1rem",
-                  padding: "1rem",
-                }}
-              >
+              <div key={s.id} className="servant-card">
                 {/* Image */}
-                {s.image && <img src={s.image} alt={s.name} width="150" />}
+                {s.image && (
+                  <div className="servant-image">
+                    <img src={s.image} alt={s.name} />
+                  </div>
+                )}
 
-                <h2>{s.name}</h2>
+                <h2 className="servant-name">{s.name}</h2>
 
-                <p>
+                <p className="servant-class">
                   <strong>Class:</strong> {s.class}
                 </p>
 
-                <p>
+                <p className="servant-rarity">
                   <strong>Rarity:</strong> ⭐{s.rarity}
                 </p>
 
-                <p>
+                <p className="servant-card-type">
                   <strong>Card Type:</strong> {s.cardType}
                 </p>
-                <p>
-                  <strong>Role: </strong> {s.role.join(", ")}
+
+                <p className="servant-role">
+                  <strong>Role:</strong> {s.role.join(", ")}
                 </p>
 
-                <p>
+                <p className="servant-np">
                   <strong>Noble Phantasm:</strong> {s.np}
                 </p>
 
                 {/* Skills */}
-                <div>
+                <div className="servant-skills">
                   <strong>Skills:</strong>
                   <ul>
                     {s.skills.map((skill) => (
-                      <li key={skill}>{skill}</li>
+                      <li key={skill} className="servant-skill">
+                        {skill}
+                      </li>
                     ))}
                   </ul>
                 </div>
 
                 {/* Passives */}
-                <div>
+                <div className="servant-passives">
                   <strong>Passives:</strong>
                   <ul>
                     {s.passives.map((passive) => (
-                      <li key={passive}>{passive}</li>
+                      <li key={passive} className="servant-passive">
+                        {passive}
+                      </li>
                     ))}
                   </ul>
                 </div>
 
-                {/*Save Button */}
-                <button onClick={() => handleSave(s)}>Save Servant</button>
+                {/* Save Button */}
+                <button
+                  className="servant-save-button"
+                  onClick={() => handleSave(s)}
+                >
+                  Save Servant
+                </button>
               </div>
             ))}
         </div>
