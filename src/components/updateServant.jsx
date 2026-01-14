@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import "./styles/update_servant.css";
 
 export default function UpdateServant({ servant, onSave }) {
   const [editedServant, setEditedServant] = useState(servant);
 
   return (
-    <form className="servant-edit-form">
+    <form className="servant-edit">
       {/* Name */}
-      <label>
-        Name
+      <label className="servant-edit__field">
+        <span className="servant-edit__label">Name</span>
         <input
+          className="servant-edit__input"
           type="text"
           value={editedServant.name}
           onChange={(e) =>
@@ -18,9 +20,10 @@ export default function UpdateServant({ servant, onSave }) {
       </label>
 
       {/* Class */}
-      <label>
-        Class
+      <label className="servant-edit__field">
+        <span className="servant-edit__label">Class</span>
         <select
+          className="servant-edit__select"
           value={editedServant.class}
           onChange={(e) =>
             setEditedServant({ ...editedServant, class: e.target.value })
@@ -42,14 +45,18 @@ export default function UpdateServant({ servant, onSave }) {
             "Pretender",
             "Shielder",
           ].map((c) => (
-            <option key={c}>{c}</option>
+            <option key={c} value={c}>
+              {c}
+            </option>
           ))}
         </select>
       </label>
 
-      <label>
-        Role
+      {/* Role */}
+      <label className="servant-edit__field">
+        <span className="servant-edit__label">Role</span>
         <input
+          className="servant-edit__input"
           type="text"
           value={editedServant.role}
           onChange={(e) =>
@@ -59,9 +66,10 @@ export default function UpdateServant({ servant, onSave }) {
       </label>
 
       {/* Rarity */}
-      <label>
-        Rarity
+      <label className="servant-edit__field">
+        <span className="servant-edit__label">Rarity</span>
         <select
+          className="servant-edit__select"
           value={editedServant.rarity}
           onChange={(e) =>
             setEditedServant({
@@ -79,25 +87,27 @@ export default function UpdateServant({ servant, onSave }) {
       </label>
 
       {/* Card Type */}
-      <label>
-        Card Type
+      <label className="servant-edit__field">
+        <span className="servant-edit__label">Card Type</span>
         <select
+          className="servant-edit__select"
           value={editedServant.cardType}
           onChange={(e) =>
             setEditedServant({ ...editedServant, cardType: e.target.value })
           }
         >
           <option value="">Select</option>
-          <option>Arts</option>
-          <option>Buster</option>
-          <option>Quick</option>
+          <option value="Arts">Arts</option>
+          <option value="Buster">Buster</option>
+          <option value="Quick">Quick</option>
         </select>
       </label>
 
       {/* Noble Phantasm */}
-      <label>
-        Noble Phantasm
+      <label className="servant-edit__field">
+        <span className="servant-edit__label">Noble Phantasm</span>
         <input
+          className="servant-edit__input"
           type="text"
           value={editedServant.np}
           onChange={(e) =>
@@ -107,11 +117,12 @@ export default function UpdateServant({ servant, onSave }) {
       </label>
 
       {/* Skills */}
-      <fieldset>
-        <legend>Skills</legend>
+      <fieldset className="servant-edit__group">
+        <legend className="servant-edit__legend">Skills</legend>
         {editedServant.skills.map((skill, index) => (
           <input
             key={index}
+            className="servant-edit__input servant-edit__input--group"
             type="text"
             value={skill}
             onChange={(e) => {
@@ -124,11 +135,12 @@ export default function UpdateServant({ servant, onSave }) {
       </fieldset>
 
       {/* Passives */}
-      <fieldset>
-        <legend>Passives</legend>
+      <fieldset className="servant-edit__group">
+        <legend className="servant-edit__legend">Passives</legend>
         {editedServant.passives.map((passive, index) => (
           <input
             key={index}
+            className="servant-edit__input servant-edit__input--group"
             type="text"
             value={passive}
             onChange={(e) => {
@@ -141,9 +153,10 @@ export default function UpdateServant({ servant, onSave }) {
       </fieldset>
 
       {/* Image */}
-      <label>
-        Image URL
+      <label className="servant-edit__field">
+        <span className="servant-edit__label">Image URL</span>
         <input
+          className="servant-edit__input"
           type="text"
           value={editedServant.image}
           onChange={(e) =>
@@ -153,7 +166,11 @@ export default function UpdateServant({ servant, onSave }) {
       </label>
 
       {/* Save */}
-      <button type="button" onClick={() => onSave(editedServant)}>
+      <button
+        type="button"
+        className="servant-edit__button servant-edit__button--save"
+        onClick={() => onSave(editedServant)}
+      >
         Save Changes
       </button>
     </form>

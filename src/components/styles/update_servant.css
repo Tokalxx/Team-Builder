@@ -1,0 +1,100 @@
+/* Root form */
+.servant-edit {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #0f1115;
+  border-radius: 16px;
+  display: grid;
+  gap: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Fields */
+.servant-edit__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Labels */
+.servant-edit__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #9aa4b2;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Inputs & Selects */
+.servant-edit__input,
+.servant-edit__select {
+  background: #161a22;
+  border: 1px solid #232836;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  color: #e6e9ef;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servant-edit__input::placeholder {
+  color: #6b7280;
+}
+
+.servant-edit__input:focus,
+.servant-edit__select:focus {
+  border-color: #4f8cff;
+  box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.15);
+}
+
+/* Grouped fields (Skills / Passives) */
+.servant-edit__group {
+  border: 1px solid #232836;
+  border-radius: 12px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.servant-edit__legend {
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9aa4b2;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.servant-edit__input--group {
+  background: #121620;
+}
+
+/* Save Button */
+.servant-edit__button {
+  margin-top: 1rem;
+  align-self: flex-end;
+  padding: 0.75rem 1.6rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.servant-edit__button--save {
+  background: linear-gradient(135deg, #4f8cff, #6c5ce7);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(79, 140, 255, 0.35);
+}
+
+.servant-edit__button--save:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 15px 35px rgba(79, 140, 255, 0.45);
+}
+
+.servant-edit__button--save:active {
+  transform: translateY(0);
+}
