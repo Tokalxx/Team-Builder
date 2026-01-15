@@ -45,26 +45,98 @@
   padding: 0.25rem;
 }
 
-/* card for filtered servants*/
-.servant-card_team {
-  border: rgb(183, 215, 226) solid 2px;
-  display: flex;
-  padding: 0;
-  column-gap: 1rem;
-  width: 50%;
-}
-
 .servant-card_team img {
   max-height: 10rem;
-}
-
-.servant-card_team--details {
-  border: rgb(183, 215, 226) solid 2px;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
 }
 
 /* -------------------------------------------------------- */
 /**/
 /* -------------------------------------------------------- */
+/* Wrapper */
+.servant-wrapper {
+  padding: 8px;
+}
+
+/* Card */
+.servant-card_team {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+
+  padding: 14px;
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(10, 15, 30, 0.95),
+    rgba(18, 25, 55, 0.95)
+  );
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  cursor: grab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.servant-card_team:hover {
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75);
+}
+
+.servant-card_team:active {
+  cursor: grabbing;
+  transform: scale(0.97);
+}
+
+/* Image */
+.servant-card_team--image {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  object-fit: cover;
+
+  background: #020617;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(59, 130, 246, 0.25);
+}
+
+/* Details */
+.servant-card_team--details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Name */
+.servant-card_team--name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #e5e7eb; /* light gray */
+}
+
+/* Role badge */
+.servant-card_team--role {
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+/* Class text */
+.servant-card_team--class {
+  font-size: 0.8rem;
+  color: #9ca3af; /* gray-400 */
+}
