@@ -18,7 +18,7 @@ body {
 .servant-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
+  gap: 4rem;
   padding: 1rem;
 }
 
@@ -30,7 +30,9 @@ body {
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
 }
@@ -206,7 +208,9 @@ body {
   height: 28px;
   cursor: pointer;
   font-weight: bold;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .modal-close:hover {
@@ -268,7 +272,9 @@ body {
   font-weight: 600;
   color: white;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .add-servant-form button:hover {
@@ -331,8 +337,7 @@ body {
 ================================ */
 .slot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   margin: 1rem 0;
 }
 

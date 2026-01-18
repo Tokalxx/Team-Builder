@@ -1,4 +1,5 @@
 import React from "react";
+import { useDroppable } from "@dnd-kit/core";
 import "./teams-style.css";
 
 export default function ServantTeamCard({
@@ -8,16 +9,30 @@ export default function ServantTeamCard({
   onDragOver,
   onDrop,
   servantInSlot,
+  slotIndex,
 }) {
+  const { setNodeRef, isOver } = useDroppable({
+    id: slotKey,
+    data: { slotIndex },
+  });
+
   return (
     <div
-      className="card-wrapper"
+      ref={setNodeRef}
+      className={`card-wrapper ${isOver ? "is-over" : ""}`}
       onClick={onClick}
-      onDragOver={onDragOver}
-      onDrop={onDrop}
     >
-      <div>{role}</div>
-      <div>{servantInSlot?.name || "N/A"}</div>
+      <div className="card-role">{role}</div>
+
+      <img
+        className="card-image"
+        src={servantInSlot?.image}
+        alt={servantInSlot?.name || "Empty slot"}
+      />
+
+      <div className="card-name">{servantInSlot?.name || "N/A"}</div>
+
+      <div className="card-class">{servantInSlot?.class || ""}</div>
     </div>
   );
 }
