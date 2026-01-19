@@ -6,13 +6,13 @@ import { DndContext, closestCenter } from "@dnd-kit/core";
 import "../App.css";
 
 export default function Teams() {
-  const teams = servantTeams;
-
-  const [slotIndex, setSlotIndex] = useState(0);
+  const [roleIndex, setRoleIndex] = useState(0);
   const [servants, setServants] = useState([]);
   const [role, setRole] = useState(null);
   const [openRole, setOpenRole] = useState(false);
   const [servantSlots, setServantSlots] = useState({});
+
+  const RoleList = ["ST DPS", "AOE DPS", "Sustain", "Support", "Anchor"];
 
   useEffect(() => {
     const loadServants = async () => {
@@ -31,7 +31,7 @@ export default function Teams() {
     if (!over) return;
 
     const servant = active.data.current?.servant;
-    const slotIndex = over.data.current?.slotIndex;
+    const slotIndex = over.id;
 
     if (servant && slotIndex !== undefined) {
       setServantSlots((prev) => ({
@@ -44,9 +44,16 @@ export default function Teams() {
   return (
     <div>
       <div className="team-wrapper">
-        {teams.map((team, index) => (
-          <label key={team.id} onClick={() => setSlotIndex(index)}>
-            {team.name}
+        {RoleList.map((role, index) => (
+          <label
+            key={role}
+            onClick={() => {
+              setRoleIndex(index);
+              setRole(role);
+              setOpenRole(true);
+            }}
+          >
+            {role}
           </label>
         ))}
 
@@ -55,7 +62,7 @@ export default function Teams() {
           onDragEnd={handleDragEnd}
         >
           <div className="slot-grid">
-            {teams[slotIndex].Slots.map((role, index) => (
+            {[...Array(6)].map((role, index) => (
               <ServantTeamCard
                 key={index}
                 slotKey={`slot-${index}`}
@@ -63,6 +70,7 @@ export default function Teams() {
                 role={role}
                 servantInSlot={servantSlots[index]}
                 onClick={() => {
+                  setRoleIndex(index);
                   setRole(role);
                   setOpenRole(true);
                 }}
@@ -78,7 +86,7 @@ export default function Teams() {
                   .filter((s) =>
                     String(s.role)
                       .toLowerCase()
-                      .includes(String(role).toLowerCase())
+                      .includes(String(role).toLowerCase()),
                   )
                   .map((servant) => (
                     <AddServant key={servant.id} servant={servant} />

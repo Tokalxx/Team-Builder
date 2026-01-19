@@ -12,8 +12,7 @@ export default function ServantTeamCard({
   slotIndex,
 }) {
   const { setNodeRef, isOver } = useDroppable({
-    id: slotKey,
-    data: { slotIndex },
+    id: slotIndex,
   });
 
   return (
@@ -22,7 +21,7 @@ export default function ServantTeamCard({
       className={`card-wrapper ${isOver ? "is-over" : ""}`}
       onClick={onClick}
     >
-      <div className="card-role">{role}</div>
+      <div className="card-role">{servantInSlot?.role || "role"}</div>
 
       <img
         className="card-image"
