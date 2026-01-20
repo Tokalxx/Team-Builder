@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Servant from "./pages/Servant";
 import Teams from "./pages/Teams";
+import SavedTeams from "./pages/SavedTeams";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/servant" element={<Servant />} />
           <Route path="/teams" element={<Teams />} />
+          <Route path="/savedTeams" element={<SavedTeams />} />
         </Routes>
       </div>
     </>

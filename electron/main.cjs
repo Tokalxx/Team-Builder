@@ -4,6 +4,7 @@ const fs = require("fs");
 
 app.setName("team_builder");
 const dataServant = path.join(app.getPath("userData"), "servants.json");
+const dataTeams = path.join(app.getPath("userData"), "teams.json");
 console.log(dataServant);
 
 let mainWindow;
@@ -107,3 +108,27 @@ ipcMain.handle("read-items", () => {
     return [];
   }
 });
+
+// Create Team Data
+ipcMain.handle("create-team", (event, newTeam) => {
+  try {
+    let team = [];
+    if (fs.existsSync(dataTeams)) {
+      const data = fs.readFileSync(dataTeams, "utf8");
+      team = JSON.parse(data);
+    }
+    newTeam.id = Date.now();
+    team.push(newTeam);
+    fs.writeFileSync(dataTeams, JSON.stringify(team, null, 2));
+    return newTeam;
+  } catch (error) {
+    console.error("Failed to create team:", error);
+    throw error;
+  }
+});
+
+// read Team Data
+
+// Update Team Data
+
+// Delete Team Data

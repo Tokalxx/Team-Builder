@@ -11,6 +11,7 @@ export default function Teams() {
   const [role, setRole] = useState(null);
   const [openRole, setOpenRole] = useState(false);
   const [servantSlots, setServantSlots] = useState({});
+  const [savedTeam, setSavedTeam] = useState({});
 
   const RoleList = ["ST DPS", "AOE DPS", "Sustain", "Support", "Anchor"];
 
@@ -41,6 +42,22 @@ export default function Teams() {
     }
   }
 
+  const handleSaveTeam = async () => {
+    const team = {
+      role,
+      slots: servantSlots,
+      createdAt: new Date().toISOString(),
+    };
+
+    setSavedTeam(team);
+
+    try {
+      await window.electronAPI.createTeam(team);
+    } catch (error) {
+      console.log("Error", error);
+    }
+  };
+
   return (
     <div>
       <div className="team-wrapper">
@@ -69,13 +86,13 @@ export default function Teams() {
                 slotIndex={index}
                 role={role}
                 servantInSlot={servantSlots[index]}
-                onClick={() => {
-                  setRoleIndex(index);
-                  setRole(role);
-                  setOpenRole(true);
-                }}
               />
             ))}
+          </div>
+          <div className="button-wrapper">
+            <button className="save-button" onClick={handleSaveTeam}>
+              Save Team
+            </button>
           </div>
 
           <div className="openRole-wrapper">

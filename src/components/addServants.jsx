@@ -106,7 +106,6 @@ export default function AddServants() {
                   </ul>
                 </div>
 
-                {/* Save Button */}
                 <button
                   className="servant-save-button"
                   onClick={() => handleSave(s)}
