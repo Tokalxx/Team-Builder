@@ -17,7 +17,7 @@ contextBridge.exposeInMainWorld("electronAPI", {
   deleteItem: (itemId) => ipcRenderer.invoke("delete-item", itemId),
 
   // Read
-  //readTeam: () => ipcRenderer.invoke("read-teams"),
+  readTeams: () => ipcRenderer.invoke("read-teams"),
 
   // Write
   createTeam: (newTeam) => ipcRenderer.invoke("create-team", newTeam),

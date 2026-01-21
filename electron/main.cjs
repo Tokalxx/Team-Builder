@@ -128,6 +128,20 @@ ipcMain.handle("create-team", (event, newTeam) => {
 });
 
 // read Team Data
+ipcMain.handle("read-teams", () => {
+  try {
+    let teams = [];
+    if (fs.existsSync(dataTeams)) {
+      const data = fs.readFileSync(dataTeams, "utf8");
+      teams = JSON.parse(data);
+    }
+
+    return teams;
+  } catch (error) {
+    console.error("Failed to read teams:", error);
+    return [];
+  }
+});
 
 // Update Team Data
 

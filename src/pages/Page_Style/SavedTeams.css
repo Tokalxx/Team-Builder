@@ -1,0 +1,93 @@
+.saved-team-card {
+  background: linear-gradient(145deg, #0f0f12, #16161b);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.saved-team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* Header */
+.saved-team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.saved-team-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.saved-team-date {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Slots grid */
+.saved-team-slots {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+}
+
+/* Slot card */
+.saved-slot-card {
+  background: #1b1b22;
+  border-radius: 0.9rem;
+  padding: 0.6rem;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.saved-slot-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* Role label */
+.saved-slot-role {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #f87171;
+  margin-bottom: 0.3rem;
+}
+
+/* Image */
+.saved-slot-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  margin-bottom: 0.4rem;
+  background: #000;
+}
+
+/* Name */
+.saved-slot-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+/* Class + rarity */
+.saved-slot-class {
+  font-size: 0.7rem;
+  color: #cbd5f5;
+  opacity: 0.85;
+}
