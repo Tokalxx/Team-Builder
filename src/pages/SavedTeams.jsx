@@ -21,7 +21,7 @@ export default function SavedTeams() {
     <div className="team_slots">
       <div className="slots">
         {teams.map((team) => (
-          <SavedTeamCard key={team.id} team={team} />
+          <SavedTeamCard key={team.id} team={team} onDelete={loadTeams} />
         ))}
       </div>
     </div>

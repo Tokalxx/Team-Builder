@@ -1,6 +1,14 @@
 import React from "react";
 
-export default function SavedTeamCard({ team }) {
+export default function SavedTeamCard({ team, onDelete }) {
+  const handleDelete = async (id) => {
+    try {
+      await window.electronAPI.deleteTeam(id);
+      onDelete();
+    } catch (error) {
+      console.log("Failed to delete team", error);
+    }
+  };
   return (
     <div className="saved-team-card">
       <div className="saved-team-header">
@@ -8,6 +16,9 @@ export default function SavedTeamCard({ team }) {
         <span className="saved-team-date">
           {new Date(team.createdAt).toLocaleString()}
         </span>
+        <button className="delete-button" onClick={() => handleDelete(team.id)}>
+          X
+        </button>
       </div>
 
       <div className="saved-team-slots">

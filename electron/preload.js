@@ -23,8 +23,8 @@ contextBridge.exposeInMainWorld("electronAPI", {
   createTeam: (newTeam) => ipcRenderer.invoke("create-team", newTeam),
 
   // Update
-  //updateTeam: () => ipcRenderer.invoke("update-team", updateTeam),
+  //updateTeam: (updateTeam) => ipcRenderer.invoke("update-team", updateTeam),
 
   //Delete
-  //deleteTeam: () => ipcRenderer.invoke("delete-team", teamId),
+  deleteTeam: (teamId) => ipcRenderer.invoke("delete-team", teamId),
 });

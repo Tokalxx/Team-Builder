@@ -93,7 +93,7 @@ ipcMain.handle("create-item", (event, newItem) => {
   }
 });
 
-//Raed Data
+//Read Data
 ipcMain.handle("read-items", () => {
   try {
     let items = [];
@@ -146,3 +146,19 @@ ipcMain.handle("read-teams", () => {
 // Update Team Data
 
 // Delete Team Data
+ipcMain.handle("delete-team", (event, teamId) => {
+  try {
+    let teams = [];
+    if (fs.existsSync(dataTeams)) {
+      const data = fs.readFileSync(dataTeams, "utf8");
+      teams = JSON.parse(data);
+    }
+
+    const newTeams = teams.filter((team) => team.id !== teamId);
+    fs.writeFileSync(dataTeams, JSON.stringify(newTeams, null, 2));
+    return true;
+  } catch (error) {
+    console.error("Failed to delete team:", error);
+    throw error;
+  }
+});
