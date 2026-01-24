@@ -3,7 +3,7 @@ import ServantTeamCard from "../components/teams/ServantTeamCard";
 import AddServant from "../components/teams/AddServant";
 import servantTeams from "../data/s_team.json";
 import { DndContext, closestCenter } from "@dnd-kit/core";
-import "../App.css";
+import "../pages/Page_Style/Teams.css";
 
 export default function Teams() {
   const [roleIndex, setRoleIndex] = useState(0);

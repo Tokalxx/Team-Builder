@@ -331,17 +331,3 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 }
-
-/* ================================
-   Teams
-================================ */
-.slot-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  margin: 1rem 0;
-}
-
-.team-wrapper label {
-  border: rgb(183, 215, 226) solid 2px;
-  margin-right: 1rem;
-}
